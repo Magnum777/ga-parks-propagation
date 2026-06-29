@@ -230,12 +230,62 @@
         let markers = [];
         let currentSpots = [];
         
-        // Mock spot data (in production, fetch from https://api.pota.app/spot/activator)
-        function generateMockSpots() {
+        // Fetch real POTA spots from API
+        async function fetchPOTASpots() {
+            try {
+                const response = await fetch('https://api.pota.app/spot/activator');
+                if (!response.ok) throw new Error('Failed to fetch spots');
+                const data = await response.json();
+                
+                // Transform POTA API data to our format
+                return data.map(spot => ({
+                    callsign: spot.activator,
+                    park: spot.reference,
+                    freq: spot.frequency,
+                    mode: spot.mode,
+                    locationDesc: spot.locationDesc || spot.reference,
+                    lat: spot.latitude || getApproxLat(spot.locationDesc),
+                    lng: spot.longitude || getApproxLng(spot.locationDesc),
+                    isGA: (spot.locationDesc || '').includes('US-GA') || (spot.reference || '').match(/^K-2[34]\d{2}$/),
+                    time: spot.spotTime || new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+                })).filter(spot => spot.lat && spot.lng);
+            } catch (error) {
+                console.error('POTA API error:', error);
+                // Fallback to demo data if API fails
+                return generateDemoSpots();
+            }
+        }
+        
+        // Approximate coordinates for common states (fallback)
+        function getApproxLat(locationDesc) {
+            if (!locationDesc) return null;
+            const loc = locationDesc.toUpperCase();
+            if (loc.includes('GA') || loc.includes('GEORGIA')) return 32.8 + (Math.random() - 0.5) * 2;
+            if (loc.includes('FL') || loc.includes('FLORIDA')) return 28 + (Math.random() - 0.5) * 3;
+            if (loc.includes('TN') || loc.includes('TENNESSEE')) return 36 + (Math.random() - 0.5) * 2;
+            if (loc.includes('SC') || loc.includes('SOUTH CAROLINA')) return 34 + (Math.random() - 0.5) * 2;
+            if (loc.includes('AL') || loc.includes('ALABAMA')) return 33 + (Math.random() - 0.5) * 2;
+            if (loc.includes('NC') || loc.includes('NORTH CAROLINA')) return 35.5 + (Math.random() - 0.5) * 2;
+            return 35 + (Math.random() - 0.5) * 10;
+        }
+        
+        function getApproxLng(locationDesc) {
+            if (!locationDesc) return null;
+            const loc = locationDesc.toUpperCase();
+            if (loc.includes('GA') || loc.includes('GEORGIA')) return -83.4 + (Math.random() - 0.5) * 2;
+            if (loc.includes('FL') || loc.includes('FLORIDA')) return -82 + (Math.random() - 0.5) * 3;
+            if (loc.includes('TN') || loc.includes('TENNESSEE')) return -86 + (Math.random() - 0.5) * 2;
+            if (loc.includes('SC') || loc.includes('SOUTH CAROLINA')) return -81 + (Math.random() - 0.5) * 2;
+            if (loc.includes('AL') || loc.includes('ALABAMA')) return -86.5 + (Math.random() - 0.5) * 2;
+            if (loc.includes('NC') || loc.includes('NORTH CAROLINA')) return -79 + (Math.random() - 0.5) * 2;
+            return -85 + (Math.random() - 0.5) * 20;
+        }
+        
+        // Demo spots as fallback
+        function generateDemoSpots() {
             const modes = ['SSB', 'CW', 'FT8', 'FT4'];
             const spots = [];
             
-            // Generate some spots in and around Georgia
             for (let i = 0; i < 25; i++) {
                 const isGA = Math.random() > 0.3;
                 const lat = isGA ? 30 + Math.random() * 4 : 25 + Math.random() * 15;
@@ -336,13 +386,12 @@
             refreshBtn.disabled = true;
             refreshBtn.textContent = '🔄 Loading...';
             
-            // Simulate API call
-            setTimeout(() => {
-                currentSpots = generateMockSpots();
+            fetchPOTASpots().then(spots => {
+                currentSpots = spots;
                 renderSpots(currentSpots);
                 refreshBtn.disabled = false;
                 refreshBtn.textContent = '🔄 Refresh';
-            }, 800);
+            });
         }
         
         // Event listeners
