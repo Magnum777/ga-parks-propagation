@@ -6,35 +6,36 @@
 
     // ==================== DATA ====================
     const parksData = [
-        { name: "Tallulah Gorge State Park", designator: "K-2341", region: "mountains", emoji: "🏔", contacts: 47, difficulty: "Hard", lat: 34.7398, lng: -83.3903 },
-        { name: "Cloudland Canyon State Park", designator: "K-2342", region: "mountains", emoji: "⛰", contacts: 52, difficulty: "Moderate", lat: 34.8317, lng: -85.4731 },
-        { name: "Fort Mountain State Park", designator: "K-2343", region: "mountains", emoji: "🏰", contacts: 38, difficulty: "Moderate", lat: 34.7667, lng: -84.7167 },
-        { name: "Black Rock Mountain State Park", designator: "K-2344", region: "mountains", emoji: "🌲", contacts: 41, difficulty: "Hard", lat: 34.8667, lng: -83.4167 },
-        { name: "Moccasin Creek State Park", designator: "K-2345", region: "mountains", emoji: "💧", contacts: 29, difficulty: "Easy", lat: 34.7833, lng: -83.6167 },
-        { name: "Unicoi State Park", designator: "K-2346", region: "mountains", emoji: "🌿", contacts: 44, difficulty: "Easy", lat: 34.7167, lng: -83.7167 },
-        { name: "Stone Mountain Park", designator: "K-2347", region: "piedmont", emoji: "🪨", contacts: 63, difficulty: "Easy", lat: 33.8061, lng: -84.1459 },
-        { name: "Sweetwater Creek State Park", designator: "K-2348", region: "piedmont", emoji: "🏞", contacts: 35, difficulty: "Easy", lat: 33.7500, lng: -84.7167 },
-        { name: "Providence Canyon State Park", designator: "K-2349", region: "piedmont", emoji: "🏜", contacts: 28, difficulty: "Moderate", lat: 32.0667, lng: -84.9833 },
-        { name: "F.D. Roosevelt State Park", designator: "K-2350", region: "piedmont", emoji: "🌳", contacts: 56, difficulty: "Moderate", lat: 32.8500, lng: -84.8000 },
-        { name: "High Falls State Park", designator: "K-2351", region: "piedmont", emoji: "💦", contacts: 33, difficulty: "Easy", lat: 33.1833, lng: -83.9667 },
-        { name: "Indian Springs State Park", designator: "K-2352", region: "piedmont", emoji: "🌸", contacts: 31, difficulty: "Easy", lat: 33.3167, lng: -83.9167 },
-        { name: "Jekyll Island State Park", designator: "K-2353", region: "coast", emoji: "🏝", contacts: 49, difficulty: "Easy", lat: 31.0667, lng: -81.4167 },
-        { name: "Cumberland Island National Seashore", designator: "K-2354", region: "coast", emoji: "🐚", contacts: 42, difficulty: "Hard", lat: 30.8333, lng: -81.4500 },
-        { name: "Skidaway Island State Park", designator: "K-2355", region: "coast", emoji: "🦐", contacts: 37, difficulty: "Easy", lat: 31.9500, lng: -81.0500 },
-        { name: "Crooked River State Park", designator: "K-2356", region: "coast", emoji: "🐊", contacts: 26, difficulty: "Moderate", lat: 30.8667, lng: -81.5500 },
-        { name: "Laura S. Walker State Park", designator: "K-2357", region: "coast", emoji: "🌴", contacts: 22, difficulty: "Easy", lat: 31.1333, lng: -82.2000 },
-        { name: "Okefenokee National Wildlife Refuge", designator: "K-2358", region: "coast", emoji: "🐸", contacts: 31, difficulty: "Hard", lat: 30.7333, lng: -82.1333 },
-        { name: "Kolomoki Mounds State Park", designator: "K-2359", region: "historic", emoji: "🏛", contacts: 24, difficulty: "Easy", lat: 31.4667, lng: -84.9167 },
-        { name: "New Echota Historic Site", designator: "K-2360", region: "historic", emoji: "📜", contacts: 19, difficulty: "Easy", lat: 34.5500, lng: -84.9167 },
-        { name: "Etowah Indian Mounds", designator: "K-2361", region: "historic", emoji: "⛺", contacts: 27, difficulty: "Easy", lat: 34.1333, lng: -84.9167 },
-        { name: "Fort Frederica National Monument", designator: "K-2362", region: "historic", emoji: "⚔", contacts: 35, difficulty: "Moderate", lat: 31.2167, lng: -81.3833 },
-        { name: "Andersonville National Historic Site", designator: "K-2363", region: "historic", emoji: "🕊", contacts: 21, difficulty: "Easy", lat: 32.2000, lng: -84.1333 },
-        { name: "Pickett's Mill Battlefield", designator: "K-2364", region: "historic", emoji: "🌾", contacts: 18, difficulty: "Easy", lat: 33.9833, lng: -84.7667 },
+        { name: "Tallulah Gorge State Park", image: "images/canyon-landscape.jpg", designator: "K-2341", region: "mountains", emoji: "🏔", contacts: 47, difficulty: "Hard", lat: 34.7398, lng: -83.3903 },
+        { name: "Cloudland Canyon State Park", image: "images/mountain-vista.jpg", designator: "K-2342", region: "mountains", emoji: "⛰", contacts: 52, difficulty: "Moderate", lat: 34.8317, lng: -85.4731 },
+        { name: "Fort Mountain State Park", image: "images/georgia-mountains.jpg", designator: "K-2343", region: "mountains", emoji: "🏰", contacts: 38, difficulty: "Moderate", lat: 34.7667, lng: -84.7167 },
+        { name: "Black Rock Mountain State Park", image: "images/mountain-range.jpg", designator: "K-2344", region: "mountains", emoji: "🌲", contacts: 41, difficulty: "Hard", lat: 34.8667, lng: -83.4167 },
+        { name: "Moccasin Creek State Park", image: "images/waterfall-nature.jpg", designator: "K-2345", region: "mountains", emoji: "💧", contacts: 29, difficulty: "Easy", lat: 34.7833, lng: -83.6167 },
+        { name: "Unicoi State Park", image: "images/forest-sunlight.jpg", designator: "K-2346", region: "mountains", emoji: "🌿", contacts: 44, difficulty: "Easy", lat: 34.7167, lng: -83.7167 },
+        { name: "Stone Mountain Park", image: "images/georgia-mountains-landscape.jpg", designator: "K-2347", region: "piedmont", emoji: "🪨", contacts: 63, difficulty: "Easy", lat: 33.8061, lng: -84.1459 },
+        { name: "Sweetwater Creek State Park", image: "images/river-rocks.jpg", designator: "K-2348", region: "piedmont", emoji: "🏞", contacts: 35, difficulty: "Easy", lat: 33.7500, lng: -84.7167 },
+        { name: "Providence Canyon State Park", image: "images/canyon-landscape.jpg", designator: "K-2349", region: "piedmont", emoji: "🏜", contacts: 28, difficulty: "Moderate", lat: 32.0667, lng: -84.9833 },
+        { name: "F.D. Roosevelt State Park", image: "images/meadow-hills.jpg", designator: "K-2350", region: "piedmont", emoji: "🌳", contacts: 56, difficulty: "Moderate", lat: 32.8500, lng: -84.8000 },
+        { name: "High Falls State Park", image: "images/waterfall-nature.jpg", designator: "K-2351", region: "piedmont", emoji: "💦", contacts: 33, difficulty: "Easy", lat: 33.1833, lng: -83.9667 },
+        { name: "Indian Springs State Park", image: "images/forest-path.jpg", designator: "K-2352", region: "piedmont", emoji: "🌸", contacts: 31, difficulty: "Easy", lat: 33.3167, lng: -83.9167 },
+        { name: "Jekyll Island State Park", image: "images/jekyll-island-beach.jpg", designator: "K-2353", region: "coast", emoji: "🏝", contacts: 49, difficulty: "Easy", lat: 31.0667, lng: -81.4167 },
+        { name: "Cumberland Island National Seashore", image: "images/beach-sunset.jpg", designator: "K-2354", region: "coast", emoji: "🐚", contacts: 42, difficulty: "Hard", lat: 30.8333, lng: -81.4500 },
+        { name: "Skidaway Island State Park", image: "images/ocean-waves.jpg", designator: "K-2355", region: "coast", emoji: "🦐", contacts: 37, difficulty: "Easy", lat: 31.9500, lng: -81.0500 },
+        { name: "Crooked River State Park", image: "images/forest-cabin.jpg", designator: "K-2356", region: "coast", emoji: "🐊", contacts: 26, difficulty: "Moderate", lat: 30.8667, lng: -81.5500 },
+        { name: "Laura S. Walker State Park", image: "images/camping-nature.jpg", designator: "K-2357", region: "coast", emoji: "🌴", contacts: 22, difficulty: "Easy", lat: 31.1333, lng: -82.2000 },
+        { name: "Okefenokee National Wildlife Refuge", image: "images/forest-deep.jpg", designator: "K-2358", region: "coast", emoji: "🐸", contacts: 31, difficulty: "Hard", lat: 30.7333, lng: -82.1333 },
+        { name: "Kolomoki Mounds State Park", image: "images/georgia-forest-trail.jpg", designator: "K-2359", region: "historic", emoji: "🏛", contacts: 24, difficulty: "Easy", lat: 31.4667, lng: -84.9167 },
+        { name: "New Echota Historic Site", image: "images/forest-mist.jpg", designator: "K-2360", region: "historic", emoji: "📜", contacts: 19, difficulty: "Easy", lat: 34.5500, lng: -84.9167 },
+        { name: "Etowah Indian Mounds", image: "images/hiking-trail.jpg", designator: "K-2361", region: "historic", emoji: "⛺", contacts: 27, difficulty: "Easy", lat: 34.1333, lng: -84.9167 },
+        { name: "Fort Frederica National Monument", image: "images/beach-sunset.jpg", designator: "K-2362", region: "historic", emoji: "⚔", contacts: 35, difficulty: "Moderate", lat: 31.2167, lng: -81.3833 },
+        { name: "Andersonville National Historic Site", image: "images/forest-trees.jpg", designator: "K-2363", region: "historic", emoji: "🕊", contacts: 21, difficulty: "Easy", lat: 32.2000, lng: -84.1333 },
+        { name: "Pickett's Mill Battlefield", image: "images/meadow-hills.jpg", designator: "K-2364", region: "historic", emoji: "🌾", contacts: 18, difficulty: "Easy", lat: 33.9833, lng: -84.7667 },
     ];
 
     const blogPosts = [
         {
             title: "The Final Activation: Tallulah Gorge and 231",
+            image: "images/canyon-landscape.jpg",
             date: "June 15, 2026",
             location: "Tallulah Gorge, GA",
             emoji: "🏔",
@@ -44,6 +45,7 @@
         },
         {
             title: "Gear That Survived Georgia Humidity",
+            image: "images/radio-equipment.jpg",
             date: "May 28, 2026",
             location: "Various Parks",
             emoji: "⚡",
@@ -53,6 +55,7 @@
         },
         {
             title: "Coastal Propagation: Why Jekyll Island is Magic",
+            image: "images/jekyll-island-beach.jpg",
             date: "April 10, 2026",
             location: "Jekyll Island, GA",
             emoji: "🏝",
@@ -62,6 +65,7 @@
         },
         {
             title: "The Music Behind the Mission",
+            image: "images/featured-video-thumb.jpg",
             date: "March 22, 2026",
             location: "Warner Robins, GA",
             emoji: "🎵",
@@ -71,6 +75,7 @@
         },
         {
             title: "Pine Pollen vs Portable Antennas: A Field Report",
+            image: "images/forest-trees.jpg",
             date: "March 8, 2026",
             location: "Providence Canyon, GA",
             emoji: "🌲",
@@ -80,6 +85,7 @@
         },
         {
             title: "Okefenokee at Dawn: The Activation That Almost Wasn't",
+            image: "images/forest-deep.jpg",
             date: "February 14, 2026",
             location: "Okefenokee NWR, GA",
             emoji: "🐊",
@@ -157,8 +163,7 @@
             
             parksGrid.innerHTML = toShow.map(park => `
                 <div class="park-card" data-region="${park.region}">
-                    <div class="park-image">
-                        ${park.emoji}
+                    <div class="park-image" style="background-image: url('${park.image || ''}'); background-size: cover; background-position: center;">
                         <span class="park-badge ${park.region}">${park.region}</span>
                     </div>
                     <div class="park-content">
@@ -417,7 +422,7 @@
             
             blogGrid.innerHTML = toShow.map(post => `
                 <article class="blog-card">
-                    <div class="blog-image">${post.emoji}</div>
+                    <div class="blog-image" style="background-image: url('${post.image || ''}'); background-size: cover; background-position: center;"></div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span>📅 ${post.date}</span>

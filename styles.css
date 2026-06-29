@@ -682,12 +682,14 @@ section {
 .park-image {
     height: 160px;
     background: var(--gradient-card);
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .park-image::after {
@@ -1431,11 +1433,14 @@ section {
 .blog-image {
     height: 200px;
     background: var(--gradient-card);
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
     position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .blog-image::after {
