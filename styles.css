@@ -59,7 +59,7 @@ body {
 }
 
 /* Global image sizing */
-img {
+img, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow {
     max-width: 100%;
     height: auto;
 }
@@ -833,6 +833,10 @@ section {
     overflow: hidden;
 }
 
+.leaflet-tile-container img {
+    max-width: 100% !important;
+}
+
 .leaflet-control-container {
     max-width: 100%;
 }
@@ -889,6 +893,8 @@ section {
     font-size: 0.85rem;
     color: var(--color-text-muted);
     cursor: pointer;
+    min-height: 44px;
+    padding: 4px 0;
 }
 
 .spots-filter input[type="checkbox"] {
@@ -1489,6 +1495,8 @@ section {
 .resource-icon {
     font-size: 2.5rem;
     margin-bottom: 16px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .resource-title {
