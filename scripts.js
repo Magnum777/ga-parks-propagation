@@ -64,16 +64,6 @@
             readTime: "5 min"
         },
         {
-            title: "The Music Behind the Mission",
-            image: "images/featured-video-thumb.jpg",
-            date: "March 22, 2026",
-            location: "Warner Robins, GA",
-            emoji: "🎵",
-            excerpt: "How WD4DAN and I turned activation stories into songs. The story behind '231 Parks' — from lyrics scribbled on a log sheet to a fully-produced track.",
-            tags: ["Music", "WD4DAN", "Behind the Scenes"],
-            readTime: "7 min"
-        },
-        {
             title: "Pine Pollen vs Portable Antennas: A Field Report",
             image: "images/forest-trees.jpg",
             date: "March 8, 2026",
@@ -527,19 +517,6 @@
         }
     }
 
-    // ==================== MUSIC PLAYER ====================
-    function initMusicPlayer() {
-        const trackPlays = document.querySelectorAll('.track-play');
-        
-        trackPlays.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const videoId = btn.dataset.video;
-                // In production, this would open a modal or redirect to YouTube
-                window.open(`https://youtube.com/watch?v=${videoId}`, '_blank');
-            });
-        });
-    }
-
     // ==================== SMOOTH SCROLL ====================
     function initSmoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -564,7 +541,6 @@
         initBlog();
         initContactForm();
         initAnimations();
-        initMusicPlayer();
         initSmoothScroll();
         
         console.log('🦝 GA Parks & Propagation website loaded');
