@@ -55,6 +55,7 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 /* Global image sizing */
@@ -811,6 +812,15 @@ section {
 
 .leaflet-popup-tip {
     background: var(--color-bg-elevated) !important;
+}
+
+/* Prevent Leaflet tiles from causing horizontal overflow */
+.leaflet-container {
+    overflow: hidden;
+}
+
+.leaflet-control-container {
+    max-width: 100%;
 }
 
 .leaflet-popup-content {
