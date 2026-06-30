@@ -112,7 +112,7 @@ async function initBandConditions() {
     } catch (e) { console.error('Kp fetch error:', e); }
 
     try {
-        // Fetch solar wind speed
+        // Fetch solar wind speed (NOAA ACE endpoint - may block CORS from some origins)
         const windResponse = await fetch('https://services.swpc.noaa.gov/json/ace/swepam/speed.json');
         if (windResponse.ok) {
             const windData = await windResponse.json();
@@ -125,8 +125,17 @@ async function initBandConditions() {
                 windStatus.textContent = windDesc;
                 windStatus.className = 'condition-status ' + windDesc.toLowerCase();
             }
+        } else {
+            throw new Error('Wind fetch blocked by CORS');
         }
-    } catch (e) { console.error('Wind fetch error:', e); }
+    } catch (e) {
+        console.error('Wind fetch error:', e);
+        if (solarWind) solarWind.textContent = 'N/A';
+        if (windStatus) {
+            windStatus.textContent = 'Unavailable';
+            windStatus.className = 'condition-status unavailable';
+        }
+    }
 
     try {
         // Fetch 3-day forecast
