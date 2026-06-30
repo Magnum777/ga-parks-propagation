@@ -24,7 +24,10 @@
                 <li><a href="#parks" class="nav-link">The 231 Parks</a></li>
                 <li><a href="#live-spots" class="nav-link">Live Spots</a></li>
                 <li><a href="#qrz" class="nav-link">QRZ</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+                <li><a href="#gear" class="nav-link">Gear</a></li>
                 <li><a href="#blog" class="nav-link">Activation Log</a></li>
+                <li><a href="#conditions" class="nav-link">Conditions</a></li>
                 <li><a href="#contact" class="nav-link nav-cta">Get in Touch</a></li>
             </ul>
         </div>
@@ -58,13 +61,17 @@
                     Explore the Parks
                 </a>
             </div>
-            <div class="hero-stats">
+            <div class="hero-stats" id="heroStats">
                 <div class="stat">
-                    <span class="stat-number">231</span>
+                    <span class="stat-number" id="heroParks">--</span>
                     <span class="stat-label">Parks Activated</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">4</span>
+                    <span class="stat-number" id="heroQsos">--</span>
+                    <span class="stat-label">Total QSOs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="heroYears">4</span>
                     <span class="stat-label">Years on the Air</span>
                 </div>
                 <div class="stat">
@@ -79,113 +86,97 @@
         </div>
     </section>
 
-    <!-- Latest Video Section -->
-    <section class="latest" id="latest">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Latest Video</span>
-                <h2 class="section-title">From the Field</h2>
-                <p class="section-desc">Recent activations, gear tests, and whatever else happens when you drag a radio into the woods.</p>
+            <div class="about-content">
+                <span class="section-tag">About the Operator</span>
+                <h2 class="section-title">
+                    Georgia Native.<br>
+                    <span class="title-accent">Amateur Radio Nut.</span>
+                </h2>
+                <p class="about-text">
+                    AE4XO is a POTA activator based in Warner Robins, Georgia. This site tracks activations across Georgia's parks using live data from the POTA API.
+                </p>
+                <p class="about-text">
+                    All data is pulled in real-time from official sources — POTA for activation logs and spots, NOAA for space weather, and YouTube for field reports.
+                </p>
+                <div class="about-details">
+                    <div class="detail">
+                        <span class="detail-label">Callsign</span>
+                        <span class="detail-value">AE4XO</span>
+                    </div>
+                    <div class="detail">
+                        <span class="detail-label">License Class</span>
+                        <span class="detail-value">General</span>
+                    </div>
+                    <div class="detail">
+                        <span class="detail-label">Home QTH</span>
+                        <span class="detail-value">Warner Robins, GA</span>
+                    </div>
+                    <div class="detail">
+                        <span class="detail-label">Grid Square</span>
+                        <span class="detail-value">EM82</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Video Section -->
+    <section class="featured" id="latest">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">From the Field</span>
+                <h2 class="section-title">Latest Activation</h2>
+                <p class="section-desc">Field reports, gear tests, and the reality of portable ham radio.</p>
             </div>
             <div class="video-wrapper">
-                <iframe
-                    src="https://www.youtube.com/embed/azicaPHvkA8"
-                    title="Latest AE4XO Activation"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/azicaPHvkA8" title="Latest activation video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="video-meta">
+            <div class="video-info">
+                <div class="video-meta">
+                    <span class="video-tag">Activation</span>
+                    <span class="video-tag">Georgia</span>
+                    <span class="video-tag">POTA</span>
+                </div>
                 <a href="https://youtube.com/@gaparksandpropagation" target="_blank" class="btn btn-outline">
-                    Subscribe on YouTube →
+                    <span class="btn-icon">▶</span>
+                    Subscribe on YouTube
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <span class="section-tag">Who's Behind the Mic?</span>
-                <h2 class="section-title">About AE4XO</h2>
-                    <div class="about-text">
-                        <p>
-                            I'm a ham radio operator based in Warner Robins, Georgia, with a simple goal:
-                            <strong>activate every POTA-eligible park in the state.</strong> Four years ago,
-                            I set out with a portable rig and a tank of gas. In 2026, I finished the job.
-                        </p>
-                        <p>
-                            Along the way, I've operated from coastal marshes at sunrise, battled humidity
-                            in pine forests, and learned more about Georgia's hidden gems than I ever
-                            expected. Every park has a story - and I'm here to tell them.
-                        </p>
-                        <p>
-                            My partner in crime (and life) is <strong>KQ4GEC</strong>. We travel together
-                            and operate together, documenting our journey across Georgia's parks.
-                        </p>
-                    </div>
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <span class="detail-icon">📡</span>
-                            <div class="detail-text">
-                                <span class="detail-label">Primary Rig</span>
-                                <span class="detail-value">ICOM IC-705</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">🏕</span>
-                            <div class="detail-text">
-                                <span class="detail-label">Favorite Mode</span>
-                                <span class="detail-value">SSB / FT8</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">☕</span>
-                            <div class="detail-text">
-                                <span class="detail-label">Fuel</span>
-                                <span class="detail-value">Coffee & Curiosity</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="https://bmc.link/ae4xo1991" target="_blank" class="btn btn-primary">
-                        ☕ Buy Me a Coffee
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    <!-- Parks Map Section -->
+    <!-- Parks Section -->
     <section class="parks" id="parks">
         <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">The Collection</span>
-                <h2 class="section-title">231 Georgia Parks</h2>
-                <p class="section-desc">From the Blue Ridge Mountains to the Golden Isles, every activation tells a story. Filter by region or explore at random.</p>
+            <div class="section-header">
+                <span class="section-tag">The Journey</span>
+                <h2 class="section-title">
+                    All 231 Georgia<br>
+                    <span class="title-accent">POTA Parks</span>
+                </h2>
+                <p class="section-desc">
+                    From the mountains to the coast. Every park activated, logged, and remembered.
+                </p>
             </div>
 
-            <div class="parks-filter">
+            <div class="parks-filters">
                 <button class="filter-btn active" data-filter="all">All Regions</button>
-                <button class="filter-btn" data-filter="mountains">Mountains</button>
-                <button class="filter-btn" data-filter="piedmont">Piedmont</button>
-                <button class="filter-btn" data-filter="coast">Coast</button>
-                <button class="filter-btn" data-filter="historic">Historic Sites</button>
+                <button class="filter-btn" data-filter="mountains">🏔 Mountains</button>
+                <button class="filter-btn" data-filter="piedmont">🌳 Piedmont</button>
+                <button class="filter-btn" data-filter="coast">🏝 Coast</button>
+                <button class="filter-btn" data-filter="historic">🏛 Historic</button>
             </div>
 
             <div class="parks-grid" id="parksGrid">
-                <!-- Parks populated via JS -->
-            </div>
-
-            <div class="parks-cta">
-                <button class="btn btn-secondary" id="loadMoreParks">
-                    Load More Parks
-                </button>
+                <!-- Populated via JS -->
             </div>
         </div>
     </section>
 
-    <!-- LIVE POTA SPOTS MAP SECTION -->
+    <!-- Live Spots Section -->
     <section class="live-spots" id="live-spots">
         <div class="container">
             <div class="section-header center">
@@ -228,43 +219,27 @@
         </div>
     </section>
 
-    <!-- QRZ PROFILE SECTION -->
-    <section class="qrz-section" id="qrz">
+    <!-- QRZ Section -->
+    <section class="qrz" id="qrz">
         <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">QRZ.com</span>
-                <h2 class="section-title">Station Profile</h2>
-                <p class="section-desc">My QRZ profile with full station details, QSL info, and activation history.</p>
-            </div>
-
-            <div class="qrz-container">
-                <div class="qrz-card">
-                    <div class="qrz-header">
-                        <div class="qrz-callsign">
-                            <span class="callsign-big">AE4XO</span>
-                            <span class="qrz-badge">✓ Verified</span>
-                        </div>
-                        <div class="qrz-avatar">
-                            <span>📻</span>
-                        </div>
-                    </div>
-
-                    <div class="qrz-details">
+            <div class="qrz-card">
+                <div class="qrz-header">
+                    <span class="qrz-call">AE4XO</span>
+                    <span class="qrz-status">📡 On the Air</span>
+                </div>
+                <div class="qrz-grid">
+                    <div class="qrz-info">
                         <div class="qrz-row">
                             <span class="qrz-label">Name</span>
-                            <span class="qrz-value">Georgia POTA Operator</span>
+                            <span class="qrz-value">AE4XO</span>
                         </div>
                         <div class="qrz-row">
                             <span class="qrz-label">Location</span>
-                            <span class="qrz-value">Warner Robins, GA • EM82</span>
+                            <span class="qrz-value">Warner Robins, Georgia</span>
                         </div>
                         <div class="qrz-row">
-                            <span class="qrz-label">Parks Activated</span>
-                            <span class="qrz-value highlight">231 / 231 (100%)</span>
-                        </div>
-                        <div class="qrz-row">
-                            <span class="qrz-label">Total QSOs</span>
-                            <span class="qrz-value">8,400+</span>
+                            <span class="qrz-label">License</span>
+                            <span class="qrz-value">General</span>
                         </div>
                         <div class="qrz-row">
                             <span class="qrz-label">Grid</span>
@@ -280,137 +255,25 @@
                         </div>
                     </div>
 
-                    <div class="qrz-gear">
-                        <h4>Station Gear</h4>
-                        <div class="gear-list">
-                            <div class="gear-item">
-                                <span class="gear-icon">📻</span>
-                                <span class="gear-name">ICOM IC-705</span>
-                                <span class="gear-desc">Primary portable rig</span>
-                            </div>
-                            <div class="gear-item">
-                                <span class="gear-icon">🎯</span>
-                                <span class="gear-name">Chameleon MPAS 2.0</span>
-                                <span class="gear-desc">Multi-band vertical</span>
-                            </div>
-                            <div class="gear-item">
-                                <span class="gear-icon">⚡</span>
-                                <span class="gear-name">Bioenno 12Ah LiFePO4</span>
-                                <span class="gear-desc">Field power</span>
-                            </div>
-                            <div class="gear-item">
-                                <span class="gear-icon">📡</span>
-                                <span class="gear-name">N9SAB End Fed Half Wave</span>
-                                <span class="gear-desc">40-6m wire antenna</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="qrz-actions">
-                        <a href="https://qrz.com/db/AE4XO" target="_blank" class="btn btn-primary btn-full">
-                            View Full QRZ Profile →
-                        </a>
-                    </div>
-                    
-                    <div class="profile-links">
+                    <div class="qrz-links">
                         <h4>Also Find Me On</h4>
-                        <div class="profile-links-grid">
-                            <a href="https://pota.app/#/profile/AE4XO" target="_blank" class="profile-link">
-                                <span class="profile-icon">🏞</span>
-                                <span class="profile-name">POTA Profile</span>
+                        <div class="link-buttons">
+                            <a href="https://pota.app/#/profile/AE4XO" target="_blank" class="link-btn">
+                                <span class="link-icon">🏞</span>
+                                <span class="link-text">POTA Profile</span>
                             </a>
-                            <a href="https://aprs.fi/info/AE4XO" target="_blank" class="profile-link">
-                                <span class="profile-icon">📡</span>
-                                <span class="profile-name">APRS</span>
+                            <a href="https://aprs.fi/info/AE4XO" target="_blank" class="link-btn">
+                                <span class="link-icon">📡</span>
+                                <span class="link-text">APRS.fi</span>
                             </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="qrz-sidebar">
-                    <div class="qrz-widget">
-                        <h4>Activation Stats</h4>
-                        <div class="stat-bars">
-                            <div class="stat-bar-item">
-                                <div class="stat-bar-label">
-                                    <span>State Parks</span>
-                                    <span>52/52</span>
-                                </div>
-                                <div class="stat-bar-track">
-                                    <div class="stat-bar-fill" style="width: 100%"></div>
-                                </div>
-                            </div>
-                            <div class="stat-bar-item">
-                                <div class="stat-bar-label">
-                                    <span>National Forests</span>
-                                    <span>4/4</span>
-                                </div>
-                                <div class="stat-bar-track">
-                                    <div class="stat-bar-fill" style="width: 100%"></div>
-                                </div>
-                            </div>
-                            <div class="stat-bar-item">
-                                <div class="stat-bar-label">
-                                    <span>WMAs</span>
-                                    <span>89/89</span>
-                                </div>
-                                <div class="stat-bar-track">
-                                    <div class="stat-bar-fill" style="width: 100%"></div>
-                                </div>
-                            </div>
-                            <div class="stat-bar-item">
-                                <div class="stat-bar-label">
-                                    <span>Historic Sites</span>
-                                    <span>23/23</span>
-                                </div>
-                                <div class="stat-bar-track">
-                                    <div class="stat-bar-fill" style="width: 100%"></div>
-                                </div>
-                            </div>
-                            <div class="stat-bar-item">
-                                <div class="stat-bar-label">
-                                    <span>NWR / NPS</span>
-                                    <span>18/18</span>
-                                </div>
-                                <div class="stat-bar-track">
-                                    <div class="stat-bar-fill" style="width: 100%"></div>
-                                </div>
-                            </div>
-                            <div class="stat-bar-item">
-                                <div class="stat-bar-label">
-                                    <span>Other</span>
-                                    <span>45/45</span>
-                                </div>
-                                <div class="stat-bar-track">
-                                    <div class="stat-bar-fill" style="width: 100%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="qrz-widget">
-                        <h4>Recent QSLs</h4>
-                        <div class="qsl-list">
-                            <div class="qsl-item">
-                                <span class="qsl-call">W8ABC</span>
-                                <span class="qsl-info">K-2341 • 20m SSB</span>
-                                <span class="qsl-date">2 days ago</span>
-                            </div>
-                            <div class="qsl-item">
-                                <span class="qsl-call">DL5XYZ</span>
-                                <span class="qsl-info">K-2353 • 17m FT8</span>
-                                <span class="qsl-date">3 days ago</span>
-                            </div>
-                            <div class="qsl-item">
-                                <span class="qsl-call">JA1AAA</span>
-                                <span class="qsl-info">K-2348 • 15m SSB</span>
-                                <span class="qsl-date">5 days ago</span>
-                            </div>
-                            <div class="qsl-item">
-                                <span class="qsl-call">VE3BCD</span>
-                                <span class="qsl-info">K-2350 • 40m CW</span>
-                                <span class="qsl-date">1 week ago</span>
-                            </div>
+                            <a href="https://qrz.com/db/AE4XO" target="_blank" class="link-btn">
+                                <span class="link-icon">📇</span>
+                                <span class="link-text">QRZ.com</span>
+                            </a>
+                            <a href="https://www.youtube.com/@gaparksandpropagation" target="_blank" class="link-btn">
+                                <span class="link-icon">▶</span>
+                                <span class="link-text">YouTube</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -418,24 +281,174 @@
         </div>
     </section>
 
+    <!-- Activation Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">The Numbers</span>
+                <h2 class="section-title">Activation Stats</h2>
+                <p class="section-desc">Real-time POTA data. Every contact, every park, every QSO logged.</p>
+            </div>
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-card">
+                    <span class="stat-number" id="statActivations">--</span>
+                    <span class="stat-label">Total Activations</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="statParks">--</span>
+                    <span class="stat-label">Unique Parks</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="statQsos">--</span>
+                    <span class="stat-label">QSOs Logged</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="statHunter">--</span>
+                    <span class="stat-label">Hunter Parks</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="statHunterQsos">--</span>
+                    <span class="stat-label">Hunter QSOs</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="statAwards">--</span>
+                    <span class="stat-label">Awards</span>
+                </div>
+            </div>
+            <div class="stats-progress">
+                <h3>Park Activation Progress</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar">
+                        <span id="progressPercent">--%</span>
+                    </div>
+                </div>
+                <p class="progress-text" id="progressText">Loading progress...</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Activation Log / Blog Section -->
+    <!-- Gear Showcase Section -->
+    <section class="gear-showcase" id="gear">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Field Tested</span>
+                <h2 class="section-title">The Setup</h2>
+                <p class="section-desc">What's in the go-bag after 500+ activations. Tested in Georgia heat, humidity, and the occasional sudden thunderstorm.</p>
+            </div>
+            <div class="gear-grid">
+                <div class="gear-showcase-card">
+                    <div class="gear-showcase-icon">📻</div>
+                    <h3>ICOM IC-705</h3>
+                    <p class="gear-showcase-desc">Primary portable rig. HF/VHF/UHF all-mode transceiver with built-in GPS and Bluetooth. Runs 5-10W on battery, perfect for field activations.</p>
+                    <span class="gear-showcase-tag">Transceiver</span>
+                </div>
+                <div class="gear-showcase-card">
+                    <div class="gear-showcase-icon">🎯</div>
+                    <h3>Chameleon MPAS 2.0</h3>
+                    <p class="gear-showcase-desc">Multi-band portable vertical. Sets up in under 5 minutes, covers 160m-6m. Modular design adapts for any terrain - from sandy beaches to rocky ridges.</p>
+                    <span class="gear-showcase-tag">Antenna</span>
+                </div>
+                <div class="gear-showcase-card">
+                    <div class="gear-showcase-icon">⚡</div>
+                    <h3>Bioenno 12Ah LiFePO4</h3>
+                    <p class="gear-showcase-desc">Field power that doesn't quit. 12Ah gives me 4-6 hours of operation at 50% duty cycle. Charges via solar panel between activations.</p>
+                    <span class="gear-showcase-tag">Power</span>
+                </div>
+                <div class="gear-showcase-card">
+                    <div class="gear-showcase-icon">🎒</div>
+                    <h3>REI Trail 40 Pack</h3>
+                    <p class="gear-showcase-desc">Everything fits in one pack: radio, battery, antenna, coax, logging tablet, first aid, and snacks. With room to spare for a foldable chair.</p>
+                    <span class="gear-showcase-tag">Pack</span>
+                </div>
+                <div class="gear-showcase-card">
+                    <div class="gear-showcase-icon">📱</div>
+                    <h3>Digital Logger</h3>
+                    <p class="gear-showcase-desc">iPad-based logging with auto-spotting to POTA. Syncs to the cloud, exports ADIF.</p>
+                    <span class="gear-showcase-tag">Logging</span>
+                </div>
+                <div class="gear-showcase-card">
+                    <div class="gear-showcase-icon">🔋</div>
+                    <h3>Goal Zero Nomad 20</h3>
+                    <p class="gear-showcase-desc">20W solar panel for recharging between activations. Essential for multi-park days when you can't get back to the truck.</p>
+                    <span class="gear-showcase-tag">Solar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activation Log Section -->
     <section class="blog" id="blog">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Field Reports</span>
+            <div class="section-header center">
+                <span class="section-tag">Recent Activations</span>
                 <h2 class="section-title">Activation Log</h2>
-                <p class="section-desc">Real-time reports from the field. Gear notes, propagation conditions, and the occasional "how did that work?" moment.</p>
+                <p class="section-desc">Real-time POTA data. Every contact, every park, every QSO logged.</p>
             </div>
-
             <div class="blog-grid" id="blogGrid">
                 <!-- Blog posts populated via JS -->
             </div>
-
             <div class="blog-cta">
-                <button class="btn btn-outline" id="loadMorePosts">
-                    Load More Posts
-                </button>
+                <a href="https://pota.app/#/profile/AE4XO" target="_blank" class="btn btn-outline">
+                    View Full Log on POTA →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Band Conditions Section -->
+    <section class="conditions" id="conditions">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Space Weather</span>
+                <h2 class="section-title">Band Conditions</h2>
+                <p class="section-desc">Live solar and geomagnetic data from NOAA. Plan your next activation.</p>
+            </div>
+            <div class="conditions-grid">
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <span class="condition-icon">☀️</span>
+                        <span class="condition-name">Solar Flux</span>
+                    </div>
+                    <span class="condition-value" id="solarFlux">--</span>
+                    <span class="condition-unit">SFU (10.7cm)</span>
+                    <span class="condition-status" id="solarStatus">Loading...</span>
+                </div>
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <span class="condition-icon">🧭</span>
+                        <span class="condition-name">K-Index</span>
+                    </div>
+                    <span class="condition-value" id="kIndex">--</span>
+                    <span class="condition-unit">Geomagnetic</span>
+                    <span class="condition-status" id="kStatus">Loading...</span>
+                </div>
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <span class="condition-icon">⚡</span>
+                        <span class="condition-name">Solar Wind</span>
+                    </div>
+                    <span class="condition-value" id="solarWind">--</span>
+                    <span class="condition-unit">km/s</span>
+                    <span class="condition-status" id="windStatus">Loading...</span>
+                </div>
+                <div class="condition-card">
+                    <div class="condition-header">
+                        <span class="condition-icon">🌡️</span>
+                        <span class="condition-name">A-Index</span>
+                    </div>
+                    <span class="condition-value" id="aIndex">--</span>
+                    <span class="condition-unit">Planetary</span>
+                    <span class="condition-status" id="aStatus">Loading...</span>
+                </div>
+            </div>
+            <div class="conditions-forecast" id="conditionsForecast">
+                <h3>3-Day Forecast</h3>
+                <div class="forecast-grid" id="forecastGrid">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+            <div class="conditions-source">
+                <p>Data from NOAA Space Weather Prediction Center • Updated hourly</p>
             </div>
         </div>
     </section>
@@ -480,63 +493,73 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Chase Me On the Air</h2>
+                <p class="section-desc">Looking to collaborate, ask about gear, or just say 73? I'm always up for a dual activation.</p>
+            </div>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <span class="section-tag">Get in Touch</span>
-                    <h2 class="section-title">Let's Talk Ham Radio</h2>
+                    <h3>Contact AE4XO</h3>
                     <p class="contact-desc">
-                        Whether you're a fellow Georgia ham looking to activate together,
-                        a gear company interested in field testing, or just someone who
-                        wants to know more about POTA - I'm always happy to chat.
+                        I check my email between activations (and sometimes during them if propagation is dead). 
+                        Best way to reach me is spotting me on POTA or dropping a message here.
                     </p>
                     <div class="contact-methods">
-                        <div class="method">
-                            <span class="method-icon">📧</span>
-                            <div class="method-text">
-                                <span class="method-label">Email</span>
-                                <a href="mailto:ae4xo1991@gmail.com" class="method-value">ae4xo1991@gmail.com</a>
+                        <div class="contact-method">
+                            <span class="contact-icon">📻</span>
+                            <div class="contact-detail">
+                                <span class="contact-label">On the Air</span>
+                                <span class="contact-value">AE4XO - usually weekends</span>
                             </div>
                         </div>
-                        <div class="method">
-                            <span class="method-icon">📻</span>
-                            <div class="method-text">
-                                <span class="method-label">QRZ Profile</span>
-                                <a href="https://qrz.com/db/AE4XO" target="_blank" class="method-value">AE4XO on QRZ</a>
+                        <div class="contact-method">
+                            <span class="contact-icon">📧</span>
+                            <div class="contact-detail">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:ae4xo1991@gmail.com" class="contact-value">ae4xo1991@gmail.com</a>
                             </div>
                         </div>
-                        <div class="method">
-                            <span class="method-icon">☕</span>
-                            <div class="method-text">
-                                <span class="method-label">Support</span>
-                                <a href="https://bmc.link/ae4xo1991" target="_blank" class="method-value">Buy Me a Coffee</a>
+                        <div class="contact-method">
+                            <span class="contact-icon">📍</span>
+                            <div class="contact-detail">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Warner Robins, Georgia (EM82)</span>
                             </div>
                         </div>
                     </div>
                     <div class="contact-social">
-                        <a href="https://youtube.com/@gaparksandpropagation" target="_blank" class="social-link" title="YouTube">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 00.5 6.19 31.5 31.5 0 000 12a31.5 31.5 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.88.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 002.12-2.14A31.5 31.5 0 0024 12a31.5 31.5 0 00-.5-5.81zM9.55 15.5V8.5l6.27 3.5-6.27 3.5z"/></svg>
+                        <a href="https://www.youtube.com/@gaparksandpropagation" target="_blank" class="social-link">
+                            <span>▶</span>
+                            <span>YouTube</span>
                         </a>
-                        <a href="https://instagram.com/ae4xo" target="_blank" class="social-link" title="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85 0-3.2.01-3.58.07-4.85.15-3.23 1.66-4.77 4.92-4.92C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.23.23 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.16 4.35 2.63 6.82 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.16 6.82-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.77 2.7 21.3.23 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm7.85-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+                        <a href="https://instagram.com/ae4xo" target="_blank" class="social-link">
+                            <span>📷</span>
+                            <span>Instagram</span>
                         </a>
-                        <a href="https://x.com/ae4xo" target="_blank" class="social-link" title="Twitter/X">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <a href="https://x.com/ae4xo" target="_blank" class="social-link">
+                            <span>🐦</span>
+                            <span>X/Twitter</span>
+                        </a>
+                        <a href="https://pota.app/#/profile/AE4XO" target="_blank" class="social-link">
+                            <span>🏞</span>
+                            <span>POTA</span>
                         </a>
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name">Your Name / Callsign</label>
-                            <input type="text" id="name" name="name" placeholder="AE5XX or John Smith" required>
+                            <label for="name">Your Callsign / Name</label>
+                            <input type="text" id="name" name="name" placeholder="KN4XYZ" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" placeholder="you@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">What's This About?</label>
-                            <select id="subject" name="subject" required>
+                            <label for="topic">Topic</label>
+                            <select id="topic" name="topic">
                                 <option value="">Select a topic...</option>
                                 <option value="collaboration">Collaboration / Dual Activation</option>
                                 <option value="gear">Gear Question / Review</option>
@@ -572,39 +595,41 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="footer-logo">📻 GA Parks & Propagation</span>
-                    <p class="footer-tagline">231 parks. Infinite stories. One frequency at a time.</p>
+                    <span class="footer-call">AE4XO</span>
+                    <p class="footer-desc">Georgia Parks & Propagation - Ham radio activations across the Peach State.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="#about">About AE4XO</a></li>
                         <li><a href="#parks">The 231 Parks</a></li>
+                        <li><a href="#live-spots">Live Spots</a></li>
                         <li><a href="#blog">Activation Log</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#resources">POTA Quick Reference</a></li>
-                        <li><a href="#resources">Route Planner</a></li>
-                        <li><a href="#resources">Power Guide</a></li>
-                        <li><a href="#resources">Antenna Guide</a></li>
+                        <li><a href="#gear">Gear</a></li>
+                        <li><a href="#conditions">Band Conditions</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <ul>
+                        <li><a href="https://pota.app/#/profile/AE4XO" target="_blank">POTA Profile</a></li>
+                        <li><a href="https://qrz.com/db/AE4XO" target="_blank">QRZ.com</a></li>
                         <li><a href="https://youtube.com/@gaparksandpropagation" target="_blank">YouTube</a></li>
-                        <li><a href="https://qrz.com/db/AE4XO" target="_blank">QRZ Profile</a></li>
-                        <li><a href="https://bmc.link/ae4xo1991" target="_blank">Buy Me a Coffee</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://instagram.com/ae4xo" target="_blank">Instagram</a></li>
+                        <li><a href="https://x.com/ae4xo" target="_blank">X/Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://pota.app" target="_blank">POTA Official</a></li>
+                        <li><a href="https://swpc.noaa.gov" target="_blank">NOAA Space Weather</a></li>
+                        <li><a href="https://hamstudy.org" target="_blank">HamStudy</a></li>
+                        <li><a href="https://aprs.fi" target="_blank">APRS.fi</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 GA Parks & Propagation • AE4XO • Built with coffee and curiosity</p>
-                <p class="footer-freq">Always listening on 146.520 MHz 📻</p>
+                <p>73 from Warner Robins, GA. Built with field-tested code and late-night coffee.</p>
             </div>
         </div>
     </footer>
@@ -613,4 +638,3 @@
     <script src="scripts.js"></script>
 </body>
 </html>
-<!-- Site rebuilt: 2026-06-30 13:10:53 -->
