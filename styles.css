@@ -57,6 +57,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Global image sizing */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Container */
 .container {
     max-width: 1200px;
@@ -1180,6 +1186,42 @@ section {
     background: var(--color-accent-glow);
 }
 
+/* QRZ Link Buttons */
+.link-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition-base);
+    min-height: 48px;
+}
+
+.link-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.link-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.link-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 .profile-icon {
     font-size: 1.3rem;
 }
@@ -1807,6 +1849,15 @@ section {
     
     .mobile-toggle {
         display: flex;
+    }
+    
+    .parks-filter {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
     }
     
     .hero {
