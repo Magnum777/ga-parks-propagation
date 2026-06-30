@@ -803,6 +803,7 @@ section {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    max-width: 100%;
 }
 
 #spotsMap {
@@ -1504,10 +1505,14 @@ section {
 }
 
 .resource-link {
+    display: inline-block;
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
+    padding: 4px 0;
+    min-height: 44px;
+    line-height: 36px;
     transition: var(--transition-fast);
 }
 
@@ -1584,6 +1589,13 @@ section {
     color: var(--color-primary);
 }
 
+.contact-value {
+    display: inline-block;
+    padding: 4px 0;
+    min-height: 44px;
+    line-height: 36px;
+}
+
 .contact-social {
     display: flex;
     gap: 12px;
@@ -1630,7 +1642,10 @@ section {
     display: block;
     font-size: 0.9rem;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    padding: 4px 0;
+    min-height: 44px;
+    line-height: 36px;
     color: var(--color-text);
 }
 
