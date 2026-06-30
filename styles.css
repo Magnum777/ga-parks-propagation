@@ -108,6 +108,18 @@ body {
     color: var(--color-bg);
 }
 
+.nav-logo-img {
+    height: 44px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.nav-logo-img:hover {
+    transform: scale(1.02);
+}
+
 .logo-text {
     font-family: var(--font-display);
     font-size: 1.25rem;
