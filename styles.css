@@ -353,8 +353,21 @@ img {
 }
 
 .btn-sm {
-    padding: 8px 16px;
+    padding: 10px 16px;
     font-size: 0.85rem;
+    min-height: 44px;
+}
+
+.leaflet-control-zoom a {
+    width: 44px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+    font-size: 20px !important;
+}
+
+.leaflet-control-zoom {
+    margin-top: 10px !important;
+    margin-left: 10px !important;
 }
 
 .btn-icon {
@@ -1437,6 +1450,13 @@ section {
 
 .blog-cta {
     text-align: center;
+}
+
+.blog-link {
+    display: inline-block;
+    padding: 8px 0;
+    min-height: 44px;
+    line-height: 28px;
 }
 
 /* Resources Section */
